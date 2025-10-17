@@ -56,12 +56,12 @@ public class Transaction {
     }
 
     public String toCSV() {
-        return date + "|" + time + "|" + descriptions + "|" + vendor + "|" + amount;
+        return date +   "|"   + time +   "|"   + descriptions +   "|"   + vendor +   "|"   + amount;
     }
 
     @Override
     public String toString() {
-        return String.format( date + "|" + time + "|" + descriptions + "|" + vendor + "|" + amount);
+        return String.format( date +   "|"   + time +   "|"   + descriptions +   "|"   + vendor +   "|"   + amount);
 
     }
 }
