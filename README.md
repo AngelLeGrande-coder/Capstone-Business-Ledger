@@ -4,7 +4,7 @@
 
 ## 👁️ Overview
 
-**Tokyo Ghoul Ledger** is a Java command-line application that reimagines a financial tracking system through the dark, stylish world of *Tokyo Ghoul*.  
+**Tokyo Ghoul Ledger** is a Java application that reimagines a financial tracking system through the dark, stylish world of *Tokyo Ghoul*.  
 Users can log deposits and payments, view categorized reports, and explore an interactive ledger filled with lore-based flavor text.
 
 All transactions are stored in a CSV file (`transactions.csv`) — representing the “records of ghouls and investigators.”
@@ -22,7 +22,7 @@ All transactions are stored in a CSV file (`transactions.csv`) — representing 
   - Year to Date  
   - Previous Year  
   - Specific Vendor or Ghoul  
-- ☕ **Themed Interface** — Inspired by *Tokyo Ghoul*, filled with immersive dialogue and ASCII art
+- ☕ **Themed Interface** — Inspired by *Tokyo Ghoul*
 
 ---
 
