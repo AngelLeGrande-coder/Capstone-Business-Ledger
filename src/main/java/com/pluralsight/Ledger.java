@@ -3,25 +3,23 @@ package com.pluralsight;
 import java.io.*;
 import java.util.*;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 public class Ledger {
 
     public static void openLedger() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Welcome to your Business Ledger!");
+        System.out.println("📜 Welcome to the Ghoul Ledger — the record of your sins.");
         boolean isRunning = true;
 
         while (isRunning) {
-            System.out.println("\n===== LEDGER MENU =====");
-            System.out.println("A) View All Transactions");
-            System.out.println("D) View Only Deposits");
-            System.out.println("P) View Only Payments");
-            System.out.println("R) Open Reports");
-            System.out.println("X) Return to Home Screen");
-            System.out.print("Select an option: ");
+            System.out.println("\n===== ⚖️  GHOUL ACCOUNT MENU  ⚖️ =====");
+            System.out.println("A) Review All Transactions");
+            System.out.println("D) View Income (Feedings / Acquisitions)");
+            System.out.println("P) View Expenses (CCG Interactions)");
+            System.out.println("R) Generate CCG Report");
+            System.out.println("X) Return to Anteiku");
+            System.out.print("Choose your fate: ");
             String choice = scanner.nextLine().trim().toUpperCase();
-
 
             if (choice.equals("A")) {
                 displayAll(loadTransactions());
@@ -33,13 +31,12 @@ public class Ledger {
                 openReports(scanner, loadTransactions());
             } else if (choice.equals("X")) {
                 isRunning = false;
-                System.out.println("Returning to home screen...");
+                System.out.println("☕ Returning to Anteiku... Hide your kagune.");
             } else {
-                System.out.println("Invalid option, please try again!");
+                System.out.println("🩸 Invalid choice. Choose wisely, one-eyed king.");
             }
         }
     }
-
 
     private static List<Transaction> loadTransactions() {
         List<Transaction> entries = new ArrayList<>();
@@ -57,33 +54,30 @@ public class Ledger {
                             parts[1],
                             parts[2],
                             parts[3],
-                            Double.parseDouble(parts[4]) // amount
+                            Double.parseDouble(parts[4])
                     );
                     entries.add(t);
                 }
             }
 
-
             Collections.reverse(entries);
 
         } catch (IOException e) {
-            System.out.println(" Could not read transactions file: " + e.getMessage());
+            System.out.println("⚰️ Could not open ghoul transaction file: " + e.getMessage());
         }
 
         return entries;
     }
 
-
     private static void displayAll(List<Transaction> entries) {
-        System.out.println("\n=== ALL TRANSACTIONS (Newest First) ===");
+        System.out.println("\n=== 🩸 ALL GHOUL TRANSACTIONS (Newest First) ===");
         for (Transaction t : entries) {
             System.out.println(t);
         }
     }
 
-
     private static void displayDeposits(List<Transaction> entries) {
-        System.out.println("\n=== DEPOSITS ===");
+        System.out.println("\n=== 💰 INCOME RECORDS ===");
         for (Transaction t : entries) {
             if (t.getAmount() > 0) {
                 System.out.println(t);
@@ -91,9 +85,8 @@ public class Ledger {
         }
     }
 
-
     private static void displayPayments(List<Transaction> entries) {
-        System.out.println("\n=== PAYMENTS ===");
+        System.out.println("\n=== 💀 EXPENSES / LOSSES ===");
         for (Transaction t : entries) {
             if (t.getAmount() < 0) {
                 System.out.println(t);
@@ -101,21 +94,19 @@ public class Ledger {
         }
     }
 
-
     private static void openReports(Scanner scanner, List<Transaction> entries) {
         boolean inReports = true;
 
         while (inReports) {
-            System.out.println("\n===== REPORT OPTIONS =====");
-            System.out.println("A) Current Month");
-            System.out.println("B) Last Month");
-            System.out.println("C) Current Year");
-            System.out.println("D) Last Year");
-            System.out.println("E) Filter by Vendor");
-            System.out.println("X) Go Back");
-            System.out.print("Choose a report type: ");
+            System.out.println("\n===== 🕯️ CCG REPORT TERMINAL 🕯️ =====");
+            System.out.println("A) Current Month Activity");
+            System.out.println("B) Previous Month");
+            System.out.println("C) Year to Date");
+            System.out.println("D) Previous Year");
+            System.out.println("E) Filter by Ghoul/Vendor");
+            System.out.println("X) Return");
+            System.out.print("Select report: ");
             String option = scanner.nextLine().trim().toUpperCase();
-
 
             if (option.equals("A")) {
                 UtilitiesReport.showMonthToDate(entries);
@@ -126,13 +117,13 @@ public class Ledger {
             } else if (option.equals("D")) {
                 UtilitiesReport.showPreviousYear(entries);
             } else if (option.equals("E")) {
-                System.out.print("Enter the vendor name: ");
+                System.out.print("Enter ghoul or vendor name: ");
                 String vendor = scanner.nextLine();
                 UtilitiesReport.showByVendor(entries, vendor);
             } else if (option.equals("X")) {
                 inReports = false;
             } else {
-                System.out.println(" Invalid option, please select A–E or X.");
+                System.out.println("☠️ Invalid input — even ghouls need discipline!");
             }
         }
     }

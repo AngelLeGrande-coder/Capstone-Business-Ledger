@@ -6,27 +6,24 @@ import java.util.Scanner;
 import java.io.FileWriter;
 import java.io.IOException;
 
-  class Homescreen {
+class Homescreen {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void homeScreen() {
 
-
-        System.out.println("Welcome to your Business Account!!!");
-
+        System.out.println("👁️ Welcome to the CCG Financial Records Terminal 👁️");
+        System.out.println("『 Tokyo Ghoul Edition 』 - Track your humanity... or your hunger.");
 
         boolean running = true;
 
-
         while (running) {
-            System.out.println("\n===== HOME SCREEN DECISIONS =====");
-            System.out.println("D) Add deposit for the day");
-            System.out.println("P) Make payment for bills or paying your employees (Debit)");
-            System.out.println("L) Open ledger");
-            System.out.println("X) Exit");
-            System.out.print("Enter your choice: ");
+            System.out.println("\n===== ☕  ANTEIKU CONTROL PANEL  ☕ =====");
+            System.out.println("D) Record ghoul territory earnings (Deposit)");
+            System.out.println("P) Log CCG expenses or feeding activity (Payment)");
+            System.out.println("L) Access full ghoul ledger");
+            System.out.println("X) Retreat into the shadows (Exit)");
+            System.out.print("Select your path: ");
             String choice = scanner.nextLine().trim().toUpperCase();
-
 
             if (choice.equals("D")) {
                 addDeposit();
@@ -36,34 +33,34 @@ import java.io.IOException;
                 Ledger.openLedger();
             } else if (choice.equals("X")) {
                 running = false;
-                System.out.println("See you next time , Goodbye!!");
+                System.out.println("⚰️ Until next hunt, Kaneki... Stay human. ⚰️");
             } else {
-                System.out.println("Invalid option! Please choose D, P, L, or X.");
+                System.out.println("☠️ Invalid input. Even ghouls must follow protocol!");
             }
         }
     }
 
     private static void addDeposit() {
         try {
-            System.out.println("\n=== Add Deposit ===");
-            System.out.print("Enter description: ");
+            System.out.println("\n=== 🩸 Record Ghoul Earnings ===");
+            System.out.print("Enter operation details (description): ");
             String description = scanner.nextLine();
 
-            System.out.print("Enter the Vendor Name: ");
+            System.out.print("Enter the allied vendor or ghoul group: ");
             String vendor = scanner.nextLine();
 
             double amount = 0;
             boolean validAmount = false;
 
             while (!validAmount) {
-                System.out.print("Enter the amount: ");
+                System.out.print("Enter the yen amount acquired: ");
                 String input = scanner.nextLine();
 
                 try {
                     amount = Double.parseDouble(input);
                     validAmount = true;
                 } catch (NumberFormatException e) {
-                    System.out.println("Please enter numbers only! (Example: 123.45)");
+                    System.out.println("☠️ Only numbers, no blood stains please!");
                 }
             }
 
@@ -75,38 +72,38 @@ import java.io.IOException;
             FileWriter writer = new FileWriter("transactions.csv", true);
             writer.write(csvFile + "\n");
             writer.close();
-            System.out.println("Deposit saved YAY!");
+            System.out.println("💉 Transaction logged successfully, Investigator.");
         } catch (IOException e) {
-            System.out.println("Error catching the file!");
+            System.out.println("🚨 Error accessing the ghoul database!");
         }
     }
 
     private static void addPayment() {
         try {
-            System.out.println("\n=== Make Payment ===");
-            System.out.print("Enter description: ");
+            System.out.println("\n=== 💀 Log Ghoul Payment ===");
+            System.out.print("Enter operation details (description): ");
             String description = scanner.nextLine();
 
-            System.out.print("Enter the Vendor name: ");
+            System.out.print("Enter the CCG target or vendor name: ");
             String vendor = scanner.nextLine();
 
             double amount = 0;
             boolean validAmount = false;
 
             while (!validAmount) {
-                System.out.print("Enter the payment amount: ");
+                System.out.print("Enter yen amount spent: ");
                 String input = scanner.nextLine();
 
                 try {
                     amount = Double.parseDouble(input);
                     if (amount <= 0) {
-                        System.out.println("Please enter a positive number!");
+                        System.out.println("🩸 Must be a positive number, Kaneki!");
                     } else {
                         amount = -Math.abs(amount);
                         validAmount = true;
                     }
                 } catch (NumberFormatException e) {
-                    System.out.println("Please enter numbers only!");
+                    System.out.println("☠️ Invalid input. Enter numeric yen values.");
                 }
             }
 
@@ -118,9 +115,9 @@ import java.io.IOException;
             FileWriter writer = new FileWriter("transactions.csv", true);
             writer.write(csvFile + "\n");
             writer.close();
-            System.out.println("Payment saved! Congrats!");
+            System.out.println("🕸️ Payment recorded in the CCG archives.");
         } catch (IOException e) {
-            System.out.println("Error catching the file, please try again!");
+            System.out.println("🚨 Database corrupted. A ghoul must have tampered with it!");
         }
     }
 }
