@@ -13,11 +13,11 @@ public class Ledger {
 
         while (isRunning) {
             System.out.println("\n===== ⚖️  GHOUL ACCOUNT MENU  ⚖️ =====");
-            System.out.println("A) Review All Transactions");
-            System.out.println("D) View Income (Feedings / Acquisitions)(deposits)");
-            System.out.println("P) View Expenses (CCG Interactions)(payments)");
-            System.out.println("R) Generate CCG Report");
-            System.out.println("X) Return to Anteiku");
+            System.out.println("A) Review All Transactions(All)"); //Displays all entries
+            System.out.println("D) View Income (Feedings / Acquisitions)(deposits)"); // Displays all deposits
+            System.out.println("P) View Expenses (CCG Interactions)(payments)"); // Displays all payments
+            System.out.println("R) Generate CCG Report(Report"); //Displays all reports
+            System.out.println("X) Return to Anteiku(Home)"); //Takes you home
             System.out.print("Choose your fate: ");
             String choice = scanner.nextLine().trim().toUpperCase();
 
