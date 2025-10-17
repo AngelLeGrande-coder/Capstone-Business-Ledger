@@ -15,7 +15,7 @@ public class UtilitiesReport {
         System.out.println("\n=== Month To Date ===");
         for (Transaction t : transactions) {
             LocalDate date = LocalDate.parse(t.getDate(), DATE_FORMAT);
-            if (date.getYear() == now.getYear() && date.getMonth() == now.getMonth()) {
+            if ( date.getYear() == now.getYear() && date.getMonth() == now.getMonth()) {
                 System.out.println(t);
 
             }
