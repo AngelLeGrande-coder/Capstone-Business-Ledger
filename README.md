@@ -65,7 +65,9 @@ public class Main {
     }
 }
 
-## 📂 File Structure
+---
+
+### 📂 File Structure
 BusinessLedger/
 │
 ├── src/com/pluralsight/
@@ -80,7 +82,7 @@ BusinessLedger/
 ---
 
 
-## 🛠️ How to Run
+### 🛠️ How to Run
 1. **Compile the project**
    ```bash
    javac com/pluralsight/*.java
@@ -91,7 +93,9 @@ Copy code
 java com.pluralsight.Main
 Follow on-screen instructions to add deposits, payments, or view reports.
 
-📈 Example Transaction File (transactions.csv)
+---
+
+###📈 Example Transaction File (transactions.csv)
 makefile
 Copy code
 2025-10-16|11:15:58|Bonus Check|Target|2150.0
@@ -107,6 +111,8 @@ Data is persistent — all entries are saved to transactions.csv and reloaded au
 
 The code uses | as a field delimiter to make parsing simple and avoid commas in text fields.
 
-👨‍💻 Author
+---
+
+###👨‍💻 Author
 Angel LeGrande
 Built with love, sweat, and tears in Java as part of the Pluralsight Business Ledger Project.
