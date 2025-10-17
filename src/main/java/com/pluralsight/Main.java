@@ -3,7 +3,7 @@ package com.pluralsight;
 public class Main {
     public static void main(String[] args) {
 
-        // 🩸 TOKYO GHOUL THEME INTRO
+        //Theme Intro
         System.out.println("──────────────────────────────────────────────");
         System.out.println("███╗   ███╗ █████╗ ███╗   ██╗███████╗██╗██╗  ██╗");
         System.out.println("████╗ ████║██╔══██╗████╗  ██║██╔════╝██║╚██╗██╔╝");
@@ -17,7 +17,7 @@ public class Main {
         System.out.println("\"The more you try to erase me, the more I'll haunt you.\" — Kaneki Ken");
         System.out.println();
 
-        // Optional cinematic fade
+
         try {
             String[] intro = {
                     "Unraveling the mask...",
@@ -30,7 +30,7 @@ public class Main {
             }
             System.out.println();
         } catch (InterruptedException e) {
-            // ignore
+
         }
 
         // Launch the actual program
