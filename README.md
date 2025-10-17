@@ -27,10 +27,3 @@ All transactions are stored in a CSV file (`transactions.csv`) — representing 
 ---
 
 ## 🧩 Project Structure
-src/com/pluralsight/
-│
-├── Main.java # Entry point — cinematic intro + program launcher
-├── Homescreen.java # Main menu — allows user to record deposits/payments and open the ledger
-├── Ledger.java # Ledger menu — displays transactions, deposits, payments, and report options
-├── UtilitiesReport.java # Date-based and vendor-based report generation
-└── Transaction.java # Data model representing a single transaction entry
