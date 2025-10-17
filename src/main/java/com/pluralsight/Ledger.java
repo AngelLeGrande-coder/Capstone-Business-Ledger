@@ -14,8 +14,8 @@ public class Ledger {
         while (isRunning) {
             System.out.println("\n===== ⚖️  GHOUL ACCOUNT MENU  ⚖️ =====");
             System.out.println("A) Review All Transactions");
-            System.out.println("D) View Income (Feedings / Acquisitions)");
-            System.out.println("P) View Expenses (CCG Interactions)");
+            System.out.println("D) View Income (Feedings / Acquisitions)(deposits)");
+            System.out.println("P) View Expenses (CCG Interactions)(payments)");
             System.out.println("R) Generate CCG Report");
             System.out.println("X) Return to Anteiku");
             System.out.print("Choose your fate: ");
