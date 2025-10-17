@@ -26,7 +26,7 @@ All transactions are stored in a CSV file (`transactions.csv`) — representing 
 
 ---
 
-## 🧩 Project Structure
+## 🧩 Project Structure / Code Running
 <img width="998" height="893" alt="Screenshot 2025-10-17 132247" src="https://github.com/user-attachments/assets/5f5bd272-8e48-4f24-b3d4-5e51131df692" />
 
 <img width="1014" height="903" alt="Screenshot 2025-10-17 132302" src="https://github.com/user-attachments/assets/ed3a0f52-c00f-4e17-80a4-60c056750058" />
