@@ -1,66 +1,29 @@
-# 🧾 Business Ledger CLI Application  
+# 🩸 Tokyo Ghoul Ledger — Java CLI Project
 
-## 📘 Overview  
-The **Business Ledger Application** is a simple Java-based CLI (Command-Line Interface) program that helps users **track financial transactions** for a small business or personal use.  
-Users can record **deposits**, **payments**, and **view reports** such as monthly, yearly, and vendor-based summaries — all stored in a CSV file.  
+> “The more you try to erase me, the more I'll haunt you.” — Kaneki Ken
 
----
+## 👁️ Overview
 
-## 🚀 Features  
+**Tokyo Ghoul Ledger** is a Java command-line application that reimagines a financial tracking system through the dark, stylish world of *Tokyo Ghoul*.  
+Users can log deposits and payments, view categorized reports, and explore an interactive ledger filled with lore-based flavor text.
 
-### 🏠 Home Screen (`Homescreen.java`)
-- **D)** Add a new deposit (positive transaction).  
-- **P)** Add a payment (negative transaction).  
-- **L)** Open the Ledger to view and filter transactions.  
-- **X)** Exit the program.  
-
-All entries are automatically saved to `transactions.csv` in the following format:  
----
-
-### 📚 Ledger (`Ledger.java`)
-Allows users to view and manage transaction data.  
-
-Options include:  
-- **A)** View All Transactions  
-- **D)** View Deposits Only (positive amounts)  
-- **P)** View Payments Only (negative amounts)  
-- **R)** Open Financial Reports  
-- **X)** Return to Home Screen  
-
-The ledger reads data from `transactions.csv` and displays it in reverse chronological order (newest first).
+All transactions are stored in a CSV file (`transactions.csv`) — representing the “records of ghouls and investigators.”
 
 ---
 
-### 📊 Reports (`UtilitiesReport.java`)
-Generates detailed reports from stored transactions.  
-Available options:
-- **A)** Current Month  
-- **B)** Previous Month  
-- **C)** Current Year  
-- **D)** Previous Year  
-- **E)** Filter by Vendor  
+## ⚙️ Features
+
+- 💰 **Record Income** — Log earnings from ghoul activities or Anteiku café sales  
+- 💀 **Track Expenses** — Document losses, payments, or CCG operations  
+- 📜 **Ledger Viewer** — Review all transactions, deposits, or payments  
+- 🕯️ **Reports System** — Generate summaries by:
+  - Current Month  
+  - Previous Month  
+  - Year to Date  
+  - Previous Year  
+  - Specific Vendor or Ghoul  
+- ☕ **Themed Interface** — Inspired by *Tokyo Ghoul*, filled with immersive dialogue and ASCII art
 
 ---
 
-### 💾 Transaction Model (`Transaction.java`)
-Defines the structure of each transaction with:
-- Date  
-- Time  
-- Description  
-- Vendor  
-- Amount  
-
-Includes methods for:
-- `toCSV()` — Convert a transaction into CSV format  
-- `toString()` — Display transaction neatly in the console  
-
----
-
-### 🧠 Main Class (`Main.java`)
-Entry point of the program:
-```java
-public class Main {
-    public static void main(String[] args) {
-        Homescreen.homeScreen();
-    }
-}
+## 🧩 Project Structure
