@@ -28,7 +28,7 @@ import java.io.IOException;
             String choice = scanner.nextLine().trim().toUpperCase();
 
 
-            if (choice.equals(" D")) {
+            if (choice.equals("D")) {
                 addDeposit();
             } else if (choice.equals("P")) {
                 addPayment();

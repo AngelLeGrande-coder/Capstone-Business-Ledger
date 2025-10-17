@@ -31,7 +31,7 @@ public class Ledger {
                 displayPayments(loadTransactions());
             } else if (choice.equals("R")) {
                 openReports(scanner, loadTransactions());
-            } else if (choice.equals(" X")) {
+            } else if (choice.equals("X")) {
                 isRunning = false;
                 System.out.println("Returning to home screen...");
             } else {
