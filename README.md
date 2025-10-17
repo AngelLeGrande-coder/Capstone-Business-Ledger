@@ -65,18 +65,48 @@ public class Main {
     }
 }
 
-# File Structure
-
+## 📂 File Structure
 BusinessLedger/
 │
 ├── src/com/pluralsight/
-│   ├── Main.java
-│   ├── Homescreen.java
-│   ├── Ledger.java
-│   ├── Transaction.java
-│   └── UtilitiesReport.java
+│ ├── Main.java
+│ ├── Homescreen.java
+│ ├── Ledger.java
+│ ├── Transaction.java
+│ └── UtilitiesReport.java
 │
-└── transactions.csv   ← Stores all saved transaction data
+└── transactions.csv ← Stores all saved transaction data
 
-#How to Run
+---
 
+
+## 🛠️ How to Run
+1. **Compile the project**
+   ```bash
+   javac com/pluralsight/*.java
+Run the main class
+
+bash
+Copy code
+java com.pluralsight.Main
+Follow on-screen instructions to add deposits, payments, or view reports.
+
+📈 Example Transaction File (transactions.csv)
+makefile
+Copy code
+2025-10-16|11:15:58|Bonus Check|Target|2150.0
+2025-10-16|11:18:15|Paycheck|Google|33000.0
+2025-10-16|14:07:22|Debt Paid|Car Loan|-97500.0
+2025-10-16|14:10:30|Direct Deposit|Social Security Back Pay|10000.0
+✅ Key Notes
+Positive amounts = Deposits (income)
+
+Negative amounts = Payments (expenses)
+
+Data is persistent — all entries are saved to transactions.csv and reloaded automatically.
+
+The code uses | as a field delimiter to make parsing simple and avoid commas in text fields.
+
+👨‍💻 Author
+Angel LeGrande
+Built with love, sweat, and tears in Java as part of the Pluralsight Business Ledger Project.
